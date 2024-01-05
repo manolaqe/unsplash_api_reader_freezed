@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:http/http.dart';
 
 import '../models/photo.dart';
@@ -50,9 +49,15 @@ class UnsplashApi {
 Future<void> main() async {
   final Client client = Client();
   final UnsplashApi api = UnsplashApi(client, 'LhmGVHNY9GK4bQtdRigmldamkO1VCOmvEbfEsHIk59k');
-  api.listPhotos(1).then((List<Photo> photos) {
-    for (final Photo photo in photos) {
-      print(photo);
-    }
-  });
+  // ignore: unused_local_variable
+  final List<Photo> photos = await api.listPhotos(1);
+  // photos.forEach((element) {
+  //   print(element.id);
+  // });
+
+  // ignore: unused_local_variable
+  final List<Photo> photosFiltered = await api.listPhotosFiltered(1, query: 'cat', color: 'green');
+  // photosFiltered.forEach((element) {
+  //   log(element.id);
+  // });
 }
