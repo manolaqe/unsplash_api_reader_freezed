@@ -33,19 +33,13 @@ mixin _$Links {
 
 /// @nodoc
 abstract class $LinksCopyWith<$Res> {
-  factory $LinksCopyWith(Links value, $Res Function(Links) then) =
-      _$LinksCopyWithImpl<$Res, Links>;
+  factory $LinksCopyWith(Links value, $Res Function(Links) then) = _$LinksCopyWithImpl<$Res, Links>;
   @useResult
-  $Res call(
-      {String self,
-      String html,
-      String download,
-      @JsonKey(name: 'download_location') String downloadLocation});
+  $Res call({String self, String html, String download, @JsonKey(name: 'download_location') String downloadLocation});
 }
 
 /// @nodoc
-class _$LinksCopyWithImpl<$Res, $Val extends Links>
-    implements $LinksCopyWith<$Res> {
+class _$LinksCopyWithImpl<$Res, $Val extends Links> implements $LinksCopyWith<$Res> {
   _$LinksCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -84,25 +78,17 @@ class _$LinksCopyWithImpl<$Res, $Val extends Links>
 
 /// @nodoc
 abstract class _$$Links$ImplCopyWith<$Res> implements $LinksCopyWith<$Res> {
-  factory _$$Links$ImplCopyWith(
-          _$Links$Impl value, $Res Function(_$Links$Impl) then) =
+  factory _$$Links$ImplCopyWith(_$Links$Impl value, $Res Function(_$Links$Impl) then) =
       __$$Links$ImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String self,
-      String html,
-      String download,
-      @JsonKey(name: 'download_location') String downloadLocation});
+  $Res call({String self, String html, String download, @JsonKey(name: 'download_location') String downloadLocation});
 }
 
 /// @nodoc
-class __$$Links$ImplCopyWithImpl<$Res>
-    extends _$LinksCopyWithImpl<$Res, _$Links$Impl>
+class __$$Links$ImplCopyWithImpl<$Res> extends _$LinksCopyWithImpl<$Res, _$Links$Impl>
     implements _$$Links$ImplCopyWith<$Res> {
-  __$$Links$ImplCopyWithImpl(
-      _$Links$Impl _value, $Res Function(_$Links$Impl) _then)
-      : super(_value, _then);
+  __$$Links$ImplCopyWithImpl(_$Links$Impl _value, $Res Function(_$Links$Impl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -142,8 +128,7 @@ class _$Links$Impl implements Links$ {
       required this.download,
       @JsonKey(name: 'download_location') required this.downloadLocation});
 
-  factory _$Links$Impl.fromJson(Map<String, dynamic> json) =>
-      _$$Links$ImplFromJson(json);
+  factory _$Links$Impl.fromJson(Map<String, dynamic> json) => _$$Links$ImplFromJson(json);
 
   @override
   final String self;
@@ -167,22 +152,18 @@ class _$Links$Impl implements Links$ {
             other is _$Links$Impl &&
             (identical(other.self, self) || other.self == self) &&
             (identical(other.html, html) || other.html == html) &&
-            (identical(other.download, download) ||
-                other.download == download) &&
-            (identical(other.downloadLocation, downloadLocation) ||
-                other.downloadLocation == downloadLocation));
+            (identical(other.download, download) || other.download == download) &&
+            (identical(other.downloadLocation, downloadLocation) || other.downloadLocation == downloadLocation));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, self, html, download, downloadLocation);
+  int get hashCode => Object.hash(runtimeType, self, html, download, downloadLocation);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$Links$ImplCopyWith<_$Links$Impl> get copyWith =>
-      __$$Links$ImplCopyWithImpl<_$Links$Impl>(this, _$identity);
+  _$$Links$ImplCopyWith<_$Links$Impl> get copyWith => __$$Links$ImplCopyWithImpl<_$Links$Impl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -197,8 +178,7 @@ abstract class Links$ implements Links {
       {required final String self,
       required final String html,
       required final String download,
-      @JsonKey(name: 'download_location')
-      required final String downloadLocation}) = _$Links$Impl;
+      @JsonKey(name: 'download_location') required final String downloadLocation}) = _$Links$Impl;
 
   factory Links$.fromJson(Map<String, dynamic> json) = _$Links$Impl.fromJson;
 
@@ -213,6 +193,5 @@ abstract class Links$ implements Links {
   String get downloadLocation;
   @override
   @JsonKey(ignore: true)
-  _$$Links$ImplCopyWith<_$Links$Impl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$Links$ImplCopyWith<_$Links$Impl> get copyWith => throw _privateConstructorUsedError;
 }

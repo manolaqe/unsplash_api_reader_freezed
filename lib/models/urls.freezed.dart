@@ -33,16 +33,13 @@ mixin _$Urls {
 
 /// @nodoc
 abstract class $UrlsCopyWith<$Res> {
-  factory $UrlsCopyWith(Urls value, $Res Function(Urls) then) =
-      _$UrlsCopyWithImpl<$Res, Urls>;
+  factory $UrlsCopyWith(Urls value, $Res Function(Urls) then) = _$UrlsCopyWithImpl<$Res, Urls>;
   @useResult
-  $Res call(
-      {String raw, String full, String regular, String small, String thumb});
+  $Res call({String raw, String full, String regular, String small, String thumb});
 }
 
 /// @nodoc
-class _$UrlsCopyWithImpl<$Res, $Val extends Urls>
-    implements $UrlsCopyWith<$Res> {
+class _$UrlsCopyWithImpl<$Res, $Val extends Urls> implements $UrlsCopyWith<$Res> {
   _$UrlsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -86,22 +83,16 @@ class _$UrlsCopyWithImpl<$Res, $Val extends Urls>
 
 /// @nodoc
 abstract class _$$Urls$ImplCopyWith<$Res> implements $UrlsCopyWith<$Res> {
-  factory _$$Urls$ImplCopyWith(
-          _$Urls$Impl value, $Res Function(_$Urls$Impl) then) =
-      __$$Urls$ImplCopyWithImpl<$Res>;
+  factory _$$Urls$ImplCopyWith(_$Urls$Impl value, $Res Function(_$Urls$Impl) then) = __$$Urls$ImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String raw, String full, String regular, String small, String thumb});
+  $Res call({String raw, String full, String regular, String small, String thumb});
 }
 
 /// @nodoc
-class __$$Urls$ImplCopyWithImpl<$Res>
-    extends _$UrlsCopyWithImpl<$Res, _$Urls$Impl>
+class __$$Urls$ImplCopyWithImpl<$Res> extends _$UrlsCopyWithImpl<$Res, _$Urls$Impl>
     implements _$$Urls$ImplCopyWith<$Res> {
-  __$$Urls$ImplCopyWithImpl(
-      _$Urls$Impl _value, $Res Function(_$Urls$Impl) _then)
-      : super(_value, _then);
+  __$$Urls$ImplCopyWithImpl(_$Urls$Impl _value, $Res Function(_$Urls$Impl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -141,14 +132,9 @@ class __$$Urls$ImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$Urls$Impl implements Urls$ {
   const _$Urls$Impl(
-      {required this.raw,
-      required this.full,
-      required this.regular,
-      required this.small,
-      required this.thumb});
+      {required this.raw, required this.full, required this.regular, required this.small, required this.thumb});
 
-  factory _$Urls$Impl.fromJson(Map<String, dynamic> json) =>
-      _$$Urls$ImplFromJson(json);
+  factory _$Urls$Impl.fromJson(Map<String, dynamic> json) => _$$Urls$ImplFromJson(json);
 
   @override
   final String raw;
@@ -180,14 +166,12 @@ class _$Urls$Impl implements Urls$ {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, raw, full, regular, small, thumb);
+  int get hashCode => Object.hash(runtimeType, raw, full, regular, small, thumb);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$Urls$ImplCopyWith<_$Urls$Impl> get copyWith =>
-      __$$Urls$ImplCopyWithImpl<_$Urls$Impl>(this, _$identity);
+  _$$Urls$ImplCopyWith<_$Urls$Impl> get copyWith => __$$Urls$ImplCopyWithImpl<_$Urls$Impl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -219,6 +203,5 @@ abstract class Urls$ implements Urls {
   String get thumb;
   @override
   @JsonKey(ignore: true)
-  _$$Urls$ImplCopyWith<_$Urls$Impl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$Urls$ImplCopyWith<_$Urls$Impl> get copyWith => throw _privateConstructorUsedError;
 }

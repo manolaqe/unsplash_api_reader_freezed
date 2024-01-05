@@ -13,8 +13,7 @@ _$Links$Impl _$$Links$ImplFromJson(Map<String, dynamic> json) => _$Links$Impl(
       downloadLocation: json['download_location'] as String,
     );
 
-Map<String, dynamic> _$$Links$ImplToJson(_$Links$Impl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$Links$ImplToJson(_$Links$Impl instance) => <String, dynamic>{
       'self': instance.self,
       'html': instance.html,
       'download': instance.download,
