@@ -15,5 +15,6 @@ class Collection with _$Collection {
     required dynamic user,
   }) = Collection$;
 
-  factory Collection.fromJson(Map<String, dynamic> json) => _$CollectionFromJson(Map<String, dynamic>.from(json));
+  factory Collection.fromJson(Map<String, dynamic> json) =>
+      _$CollectionFromJson(Map<String, dynamic>.from(json));
 }

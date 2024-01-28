@@ -9,8 +9,10 @@ part 'change_profile_image.freezed.dart';
 class ChangeProfileImage with _$ChangeProfileImage implements AppAction {
   const factory ChangeProfileImage(String path) = ChangeProfileImageStart;
 
-  const factory ChangeProfileImage.successful(AppUser appUser) = ChangeProfileImageSuccessful;
+  const factory ChangeProfileImage.successful(AppUser appUser) =
+      ChangeProfileImageSuccessful;
 
   @Implements<ErrorAction>()
-  const factory ChangeProfileImage.error(Object error, StackTrace stackTrace) = ChangeProfileImageError;
+  const factory ChangeProfileImage.error(Object error, StackTrace stackTrace) =
+      ChangeProfileImageError;
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:photo_view/photo_view.dart';
 
 import '../actions/create_review.dart';
 import '../models/app_user.dart';
 import '../models/photo.dart';
 import '../models/review.dart';
-import 'containers/app_user_container.dart';
 import 'containers/reviews_container.dart';
 import 'containers/selected_photo_container.dart';
 import 'containers/users_container.dart';
@@ -35,15 +35,16 @@ class PhotoPage extends StatelessWidget {
                                 height: 300,
                                 child: AspectRatio(
                                   aspectRatio: 0.69,
-                                  child: Image.network(
+                                  child: PhotoView(
+                                      imageProvider: NetworkImage(
                                     photo.urls.full,
-                                  ),
+                                  )),
                                 ),
                               ),
                             ),
                             const SizedBox(height: 16.0),
                             Text(
-                              '${photo.likes}',
+                              '${photo.likes} likes',
                               style: const TextStyle(
                                 color: Colors.amber,
                                 fontSize: 32.0,
@@ -51,7 +52,7 @@ class PhotoPage extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 16.0),
-                            Text('${photo.updatedAt}'),
+                            Text(photo.updatedAt),
                           ],
                         ),
                       ),

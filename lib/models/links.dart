@@ -14,5 +14,6 @@ class Links with _$Links {
     @JsonKey(name: 'download_location') required String downloadLocation,
   }) = Links$;
 
-  factory Links.fromJson(Map<String, dynamic> json) => _$LinksFromJson(Map<String, dynamic>.from(json));
+  factory Links.fromJson(Map<String, dynamic> json) =>
+      _$LinksFromJson(Map<String, dynamic>.from(json));
 }

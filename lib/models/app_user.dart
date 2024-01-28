@@ -12,5 +12,6 @@ class AppUser with _$AppUser {
     String? profileImageUrl,
   }) = AppUser$;
 
-  factory AppUser.fromJson(Map<String, dynamic> json) => _$AppUserFromJson(Map<String, dynamic>.from(json));
+  factory AppUser.fromJson(Map<String, dynamic> json) =>
+      _$AppUserFromJson(Map<String, dynamic>.from(json));
 }

@@ -33,75 +33,96 @@ class AppEpics extends EpicClass<AppState> {
       TypedEpic<AppState, GetCurrentUserStart>(_getCurrentUserStart).call,
       TypedEpic<AppState, SignOutStart>(_signOutStart).call,
       TypedEpic<AppState, SignInStart>(_signInStart).call,
-      TypedEpic<AppState, ChangeProfileImageStart>(_changeProfileImageStart).call,
+      TypedEpic<AppState, ChangeProfileImageStart>(_changeProfileImageStart)
+          .call,
       TypedEpic<AppState, GetReviewsStart>(_getReviewsStart).call,
       TypedEpic<AppState, CreateReviewStart>(_createReviewStart).call,
       TypedEpic<AppState, GetUsersStart>(_getUsersStart).call,
     ])(actions, store);
   }
 
-  Stream<AppAction> _listPhotoFilteredStart(Stream<ListPhotoFilteredStart> actions, EpicStore<AppState> store) {
-    return actions.debounceTime(const Duration(milliseconds: 500)).switchMap((ListPhotoFilteredStart action) {
+  Stream<AppAction> _listPhotoFilteredStart(
+      Stream<ListPhotoFilteredStart> actions, EpicStore<AppState> store) {
+    return actions
+        .debounceTime(const Duration(milliseconds: 500))
+        .switchMap((ListPhotoFilteredStart action) {
       return Stream<void>.value(null)
           .asyncMap((_) {
-            return api.listPhotosFiltered(store.state.page, query: store.state.query, color: store.state.color);
+            return api.listPhotosFiltered(store.state.page,
+                query: store.state.query, color: store.state.color);
           })
           .map((List<Photo> photos) => ListPhotoFiltered.successful(photos))
-          .onErrorReturnWith((Object error, StackTrace stackTrace) => ListPhotoFiltered.error(error, stackTrace));
+          .onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              ListPhotoFiltered.error(error, stackTrace));
     });
   }
 
-  Stream<AppAction> _createUserStart(Stream<CreateUserStart> actions, EpicStore<AppState> store) {
+  Stream<AppAction> _createUserStart(
+      Stream<CreateUserStart> actions, EpicStore<AppState> store) {
     return actions.flatMap((CreateUserStart action) {
       return Stream<void>.value(null)
-          .asyncMap((_) => authApi.createUser(email: action.email, password: action.password))
+          .asyncMap((_) => authApi.createUser(
+              email: action.email, password: action.password))
           .map((AppUser user) => CreateUser.successful(user))
-          .onErrorReturnWith((Object error, StackTrace stackTrace) => CreateUser.error(error, stackTrace))
+          .onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              CreateUser.error(error, stackTrace))
           .doOnData(action.result);
     });
   }
 
-  Stream<AppAction> _getCurrentUserStart(Stream<GetCurrentUserStart> actions, EpicStore<AppState> store) {
+  Stream<AppAction> _getCurrentUserStart(
+      Stream<GetCurrentUserStart> actions, EpicStore<AppState> store) {
     return actions.flatMap((GetCurrentUserStart action) {
       return Stream<void>.value(null)
           .asyncMap((_) => authApi.getCurrentUser())
           .map((AppUser? user) => GetCurrentUser.successful(user))
-          .onErrorReturnWith((Object error, StackTrace stackTrace) => GetCurrentUser.error(error, stackTrace));
+          .onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              GetCurrentUser.error(error, stackTrace));
     });
   }
 
-  Stream<AppAction> _signOutStart(Stream<SignOutStart> actions, EpicStore<AppState> store) {
+  Stream<AppAction> _signOutStart(
+      Stream<SignOutStart> actions, EpicStore<AppState> store) {
     return actions.flatMap((SignOutStart action) {
       return Stream<void>.value(null)
           .asyncMap((_) => authApi.signOut())
           .map((_) => const SignOut.successful())
-          .onErrorReturnWith((Object error, StackTrace stackTrace) => SignOut.error(error, stackTrace));
+          .onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              SignOut.error(error, stackTrace));
     });
   }
 
-  Stream<AppAction> _signInStart(Stream<SignInStart> actions, EpicStore<AppState> store) {
+  Stream<AppAction> _signInStart(
+      Stream<SignInStart> actions, EpicStore<AppState> store) {
     return actions.flatMap((SignInStart action) {
       return Stream<void>.value(null)
-          .asyncMap((_) => authApi.signIn(email: action.email, password: action.password))
+          .asyncMap((_) =>
+              authApi.signIn(email: action.email, password: action.password))
           .map((AppUser user) => SignIn.successful(user))
-          .onErrorReturnWith((Object error, StackTrace stackTrace) => SignIn.error(error, stackTrace))
+          .onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              SignIn.error(error, stackTrace))
           .doOnData(action.result);
     });
   }
 
-  Stream<AppAction> _changeProfileImageStart(Stream<ChangeProfileImageStart> actions, EpicStore<AppState> store) {
+  Stream<AppAction> _changeProfileImageStart(
+      Stream<ChangeProfileImageStart> actions, EpicStore<AppState> store) {
     return actions.flatMap((ChangeProfileImageStart action) {
       return Stream<void>.value(null)
           .asyncMap((_) => authApi.changeProfileImage(path: action.path))
           .map((AppUser user) => ChangeProfileImage.successful(user))
-          .onErrorReturnWith((Object error, StackTrace stackTrace) => ChangeProfileImage.error(error, stackTrace));
+          .onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              ChangeProfileImage.error(error, stackTrace));
     });
   }
 
-  Stream<AppAction> _getReviewsStart(Stream<GetReviewsStart> actions, EpicStore<AppState> store) {
+  Stream<AppAction> _getReviewsStart(
+      Stream<GetReviewsStart> actions, EpicStore<AppState> store) {
     return actions //
         .flatMap((GetReviewsStart action) {
-      return Stream<void>.value(null).asyncMap((_) => api.getReviews(action.photoId)).expand((List<Review> reviews) {
+      return Stream<void>.value(null)
+          .asyncMap((_) => api.getReviews(action.photoId))
+          .expand((List<Review> reviews) {
         final List<String> uids = reviews
             .map((Review review) => review.uid)
             .toSet()
@@ -112,11 +133,13 @@ class AppEpics extends EpicClass<AppState> {
           GetReviews.successful(reviews),
           if (uids.isNotEmpty) GetUsers(uids),
         ];
-      }).onErrorReturnWith((Object error, StackTrace stackTrace) => GetReviews.error(error, stackTrace));
+      }).onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              GetReviews.error(error, stackTrace));
     });
   }
 
-  Stream<AppAction> _createReviewStart(Stream<CreateReviewStart> actions, EpicStore<AppState> store) {
+  Stream<AppAction> _createReviewStart(
+      Stream<CreateReviewStart> actions, EpicStore<AppState> store) {
     return actions.flatMap((CreateReviewStart action) {
       return Stream<void>.value(null)
           .asyncMap((_) {
@@ -127,17 +150,20 @@ class AppEpics extends EpicClass<AppState> {
             );
           })
           .map((Review review) => CreateReview.successful(review))
-          .onErrorReturnWith((Object error, StackTrace stackTrace) => CreateReview.error(error, stackTrace));
+          .onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              CreateReview.error(error, stackTrace));
     });
   }
 
-  Stream<AppAction> _getUsersStart(Stream<GetUsersStart> actions, EpicStore<AppState> store) {
+  Stream<AppAction> _getUsersStart(
+      Stream<GetUsersStart> actions, EpicStore<AppState> store) {
     return actions //
         .flatMap((GetUsersStart action) {
       return Stream<void>.value(null)
           .asyncMap((_) => authApi.getUsers(action.uids))
           .map((List<AppUser> users) => GetUsers.successful(users))
-          .onErrorReturnWith((Object error, StackTrace stackTrace) => GetUsers.error(error, stackTrace));
+          .onErrorReturnWith((Object error, StackTrace stackTrace) =>
+              GetUsers.error(error, stackTrace));
     });
   }
 }

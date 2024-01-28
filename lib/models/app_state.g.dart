@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: always_specify_types
+
 part of 'app_state.dart';
 
 // **************************************************************************
@@ -19,7 +21,8 @@ _$AppState$Impl _$$AppState$ImplFromJson(Map<String, dynamic> json) =>
           ? null
           : AppUser.fromJson(json['user'] as Map<String, dynamic>),
       users: (json['users'] as Map<String, dynamic>?)?.map(
-            (k, e) => MapEntry(k, AppUser.fromJson(e as Map<String, dynamic>)),
+            (String k, e) =>
+                MapEntry(k, AppUser.fromJson(e as Map<String, dynamic>)),
           ) ??
           const <String, AppUser>{},
       photos: (json['photos'] as List<dynamic>?)

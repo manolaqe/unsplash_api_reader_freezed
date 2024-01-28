@@ -25,5 +25,6 @@ class User with _$User {
     required UserLinks links,
   }) = User$;
 
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(Map<String, dynamic>.from(json));
+  factory User.fromJson(Map<String, dynamic> json) =>
+      _$UserFromJson(Map<String, dynamic>.from(json));
 }
