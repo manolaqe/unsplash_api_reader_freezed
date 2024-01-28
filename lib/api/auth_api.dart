@@ -31,10 +31,8 @@ class AuthApi {
     return _extractUser();
   }
 
-  Future<AppUser> createUser(
-      {required String email, required String password}) async {
-    await _auth.createUserWithEmailAndPassword(
-        email: email, password: password);
+  Future<AppUser> createUser({required String email, required String password}) async {
+    await _auth.createUserWithEmailAndPassword(email: email, password: password);
     return _extractUser();
   }
 
@@ -53,13 +51,11 @@ class AuthApi {
         await _firestore.collection('users').where('uid', whereIn: uids).get();
 
     return snapshot.docs
-        .map((QueryDocumentSnapshot<Map<String, dynamic>> doc) =>
-            AppUser.fromJson(doc.data()))
+        .map((QueryDocumentSnapshot<Map<String, dynamic>> doc) => AppUser.fromJson(doc.data()))
         .toList();
   }
 
-  Future<AppUser> signIn(
-      {required String email, required String password}) async {
+  Future<AppUser> signIn({required String email, required String password}) async {
     await _auth.signInWithEmailAndPassword(email: email, password: password);
     return _extractUser();
   }
@@ -71,8 +67,7 @@ class AuthApi {
   Future<AppUser> _extractUser() async {
     final User user = _auth.currentUser!;
 
-    final DocumentReference<Map<String, dynamic>> ref =
-        _firestore.doc('users/${user.uid}');
+    final DocumentReference<Map<String, dynamic>> ref = _firestore.doc('users/${user.uid}');
     final DocumentSnapshot<Map<String, dynamic>> doc = await ref.get();
 
     AppUser appUser;

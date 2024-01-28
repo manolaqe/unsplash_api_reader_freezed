@@ -30,10 +30,8 @@ Future<void> main() async {
   final FirebaseAuth auth = FirebaseAuth.instance;
   final FirebaseStorage storage = FirebaseStorage.instance;
   final FirebaseFirestore firestore = FirebaseFirestore.instance;
-  final UnsplashApi api = UnsplashApi(
-      client, 'RyfFUy-CATYib_AafPmICQqaTuuri3qQzu93pcpZayg', firestore);
-  final AuthApi authApi =
-      AuthApi(auth: auth, storage: storage, firestore: firestore);
+  final UnsplashApi api = UnsplashApi(client, 'RyfFUy-CATYib_AafPmICQqaTuuri3qQzu93pcpZayg', firestore);
+  final AuthApi authApi = AuthApi(auth: auth, storage: storage, firestore: firestore);
   final AppEpics appEpic = AppEpics(api, authApi);
 
   final Store<AppState> store = Store<AppState>(

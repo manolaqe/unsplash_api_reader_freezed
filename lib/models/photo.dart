@@ -23,13 +23,10 @@ class Photo with _$Photo {
     @Default(false) @JsonKey(name: 'liked_by_user') bool likedByUser,
     @Default('') String description,
     required User user,
-    @Default(<Collection>[])
-    @JsonKey(name: 'current_user_collections')
-    List<Collection> currentUserCollections,
+    @Default(<Collection>[]) @JsonKey(name: 'current_user_collections') List<Collection> currentUserCollections,
     required Urls urls,
     required Links links,
   }) = Photo$;
 
-  factory Photo.fromJson(Map<String, dynamic> json) =>
-      _$PhotoFromJson(Map<String, dynamic>.from(json));
+  factory Photo.fromJson(Map<String, dynamic> json) => _$PhotoFromJson(Map<String, dynamic>.from(json));
 }

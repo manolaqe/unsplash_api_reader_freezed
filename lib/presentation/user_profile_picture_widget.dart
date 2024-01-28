@@ -20,9 +20,7 @@ class UserProfilePictureWidget extends StatelessWidget {
       return CircleAvatar(
           radius: radius,
           backgroundColor: Colors.greenAccent,
-          backgroundImage: appUser.profileImageUrl != null
-              ? NetworkImage(appUser.profileImageUrl!)
-              : null,
+          backgroundImage: appUser.profileImageUrl != null ? NetworkImage(appUser.profileImageUrl!) : null,
           child: appUser.profileImageUrl != null
               ? null
               : Text(

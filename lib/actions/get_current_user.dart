@@ -9,10 +9,8 @@ part 'get_current_user.freezed.dart';
 class GetCurrentUser with _$GetCurrentUser implements AppAction {
   const factory GetCurrentUser() = GetCurrentUserStart;
 
-  const factory GetCurrentUser.successful(AppUser? appUser) =
-      GetCurrentUserSuccessful;
+  const factory GetCurrentUser.successful(AppUser? appUser) = GetCurrentUserSuccessful;
 
   @Implements<ErrorAction>()
-  const factory GetCurrentUser.error(Object error, StackTrace stackTrace) =
-      GetCurrentUserError;
+  const factory GetCurrentUser.error(Object error, StackTrace stackTrace) = GetCurrentUserError;
 }

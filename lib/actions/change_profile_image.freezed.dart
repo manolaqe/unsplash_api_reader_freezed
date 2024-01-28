@@ -64,8 +64,7 @@ mixin _$ChangeProfileImage {
 
 /// @nodoc
 abstract class $ChangeProfileImageCopyWith<$Res> {
-  factory $ChangeProfileImageCopyWith(
-          ChangeProfileImage value, $Res Function(ChangeProfileImage) then) =
+  factory $ChangeProfileImageCopyWith(ChangeProfileImage value, $Res Function(ChangeProfileImage) then) =
       _$ChangeProfileImageCopyWithImpl<$Res, ChangeProfileImage>;
 }
 
@@ -83,8 +82,7 @@ class _$ChangeProfileImageCopyWithImpl<$Res, $Val extends ChangeProfileImage>
 /// @nodoc
 abstract class _$$ChangeProfileImageStartImplCopyWith<$Res> {
   factory _$$ChangeProfileImageStartImplCopyWith(
-          _$ChangeProfileImageStartImpl value,
-          $Res Function(_$ChangeProfileImageStartImpl) then) =
+          _$ChangeProfileImageStartImpl value, $Res Function(_$ChangeProfileImageStartImpl) then) =
       __$$ChangeProfileImageStartImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String path});
@@ -92,12 +90,10 @@ abstract class _$$ChangeProfileImageStartImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ChangeProfileImageStartImplCopyWithImpl<$Res>
-    extends _$ChangeProfileImageCopyWithImpl<$Res,
-        _$ChangeProfileImageStartImpl>
+    extends _$ChangeProfileImageCopyWithImpl<$Res, _$ChangeProfileImageStartImpl>
     implements _$$ChangeProfileImageStartImplCopyWith<$Res> {
   __$$ChangeProfileImageStartImplCopyWithImpl(
-      _$ChangeProfileImageStartImpl _value,
-      $Res Function(_$ChangeProfileImageStartImpl) _then)
+      _$ChangeProfileImageStartImpl _value, $Res Function(_$ChangeProfileImageStartImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -141,9 +137,8 @@ class _$ChangeProfileImageStartImpl implements ChangeProfileImageStart {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeProfileImageStartImplCopyWith<_$ChangeProfileImageStartImpl>
-      get copyWith => __$$ChangeProfileImageStartImplCopyWithImpl<
-          _$ChangeProfileImageStartImpl>(this, _$identity);
+  _$$ChangeProfileImageStartImplCopyWith<_$ChangeProfileImageStartImpl> get copyWith =>
+      __$$ChangeProfileImageStartImplCopyWithImpl<_$ChangeProfileImageStartImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -215,20 +210,18 @@ class _$ChangeProfileImageStartImpl implements ChangeProfileImageStart {
 }
 
 abstract class ChangeProfileImageStart implements ChangeProfileImage {
-  const factory ChangeProfileImageStart(final String path) =
-      _$ChangeProfileImageStartImpl;
+  const factory ChangeProfileImageStart(final String path) = _$ChangeProfileImageStartImpl;
 
   String get path;
   @JsonKey(ignore: true)
-  _$$ChangeProfileImageStartImplCopyWith<_$ChangeProfileImageStartImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ChangeProfileImageStartImplCopyWith<_$ChangeProfileImageStartImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeProfileImageSuccessfulImplCopyWith<$Res> {
   factory _$$ChangeProfileImageSuccessfulImplCopyWith(
-          _$ChangeProfileImageSuccessfulImpl value,
-          $Res Function(_$ChangeProfileImageSuccessfulImpl) then) =
+          _$ChangeProfileImageSuccessfulImpl value, $Res Function(_$ChangeProfileImageSuccessfulImpl) then) =
       __$$ChangeProfileImageSuccessfulImplCopyWithImpl<$Res>;
   @useResult
   $Res call({AppUser appUser});
@@ -238,12 +231,10 @@ abstract class _$$ChangeProfileImageSuccessfulImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ChangeProfileImageSuccessfulImplCopyWithImpl<$Res>
-    extends _$ChangeProfileImageCopyWithImpl<$Res,
-        _$ChangeProfileImageSuccessfulImpl>
+    extends _$ChangeProfileImageCopyWithImpl<$Res, _$ChangeProfileImageSuccessfulImpl>
     implements _$$ChangeProfileImageSuccessfulImplCopyWith<$Res> {
   __$$ChangeProfileImageSuccessfulImplCopyWithImpl(
-      _$ChangeProfileImageSuccessfulImpl _value,
-      $Res Function(_$ChangeProfileImageSuccessfulImpl) _then)
+      _$ChangeProfileImageSuccessfulImpl _value, $Res Function(_$ChangeProfileImageSuccessfulImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -270,8 +261,7 @@ class __$$ChangeProfileImageSuccessfulImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ChangeProfileImageSuccessfulImpl
-    implements ChangeProfileImageSuccessful {
+class _$ChangeProfileImageSuccessfulImpl implements ChangeProfileImageSuccessful {
   const _$ChangeProfileImageSuccessfulImpl(this.appUser);
 
   @override
@@ -296,10 +286,8 @@ class _$ChangeProfileImageSuccessfulImpl
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeProfileImageSuccessfulImplCopyWith<
-          _$ChangeProfileImageSuccessfulImpl>
-      get copyWith => __$$ChangeProfileImageSuccessfulImplCopyWithImpl<
-          _$ChangeProfileImageSuccessfulImpl>(this, _$identity);
+  _$$ChangeProfileImageSuccessfulImplCopyWith<_$ChangeProfileImageSuccessfulImpl> get copyWith =>
+      __$$ChangeProfileImageSuccessfulImplCopyWithImpl<_$ChangeProfileImageSuccessfulImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -371,21 +359,18 @@ class _$ChangeProfileImageSuccessfulImpl
 }
 
 abstract class ChangeProfileImageSuccessful implements ChangeProfileImage {
-  const factory ChangeProfileImageSuccessful(final AppUser appUser) =
-      _$ChangeProfileImageSuccessfulImpl;
+  const factory ChangeProfileImageSuccessful(final AppUser appUser) = _$ChangeProfileImageSuccessfulImpl;
 
   AppUser get appUser;
   @JsonKey(ignore: true)
-  _$$ChangeProfileImageSuccessfulImplCopyWith<
-          _$ChangeProfileImageSuccessfulImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ChangeProfileImageSuccessfulImplCopyWith<_$ChangeProfileImageSuccessfulImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ChangeProfileImageErrorImplCopyWith<$Res> {
   factory _$$ChangeProfileImageErrorImplCopyWith(
-          _$ChangeProfileImageErrorImpl value,
-          $Res Function(_$ChangeProfileImageErrorImpl) then) =
+          _$ChangeProfileImageErrorImpl value, $Res Function(_$ChangeProfileImageErrorImpl) then) =
       __$$ChangeProfileImageErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Object error, StackTrace stackTrace});
@@ -393,12 +378,10 @@ abstract class _$$ChangeProfileImageErrorImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ChangeProfileImageErrorImplCopyWithImpl<$Res>
-    extends _$ChangeProfileImageCopyWithImpl<$Res,
-        _$ChangeProfileImageErrorImpl>
+    extends _$ChangeProfileImageCopyWithImpl<$Res, _$ChangeProfileImageErrorImpl>
     implements _$$ChangeProfileImageErrorImplCopyWith<$Res> {
   __$$ChangeProfileImageErrorImplCopyWithImpl(
-      _$ChangeProfileImageErrorImpl _value,
-      $Res Function(_$ChangeProfileImageErrorImpl) _then)
+      _$ChangeProfileImageErrorImpl _value, $Res Function(_$ChangeProfileImageErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -438,20 +421,17 @@ class _$ChangeProfileImageErrorImpl implements ChangeProfileImageError {
         (other.runtimeType == runtimeType &&
             other is _$ChangeProfileImageErrorImpl &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            (identical(other.stackTrace, stackTrace) ||
-                other.stackTrace == stackTrace));
+            (identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangeProfileImageErrorImplCopyWith<_$ChangeProfileImageErrorImpl>
-      get copyWith => __$$ChangeProfileImageErrorImplCopyWithImpl<
-          _$ChangeProfileImageErrorImpl>(this, _$identity);
+  _$$ChangeProfileImageErrorImplCopyWith<_$ChangeProfileImageErrorImpl> get copyWith =>
+      __$$ChangeProfileImageErrorImplCopyWithImpl<_$ChangeProfileImageErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -522,15 +502,13 @@ class _$ChangeProfileImageErrorImpl implements ChangeProfileImageError {
   }
 }
 
-abstract class ChangeProfileImageError
-    implements ChangeProfileImage, ErrorAction {
-  const factory ChangeProfileImageError(
-          final Object error, final StackTrace stackTrace) =
+abstract class ChangeProfileImageError implements ChangeProfileImage, ErrorAction {
+  const factory ChangeProfileImageError(final Object error, final StackTrace stackTrace) =
       _$ChangeProfileImageErrorImpl;
 
   Object get error;
   StackTrace get stackTrace;
   @JsonKey(ignore: true)
-  _$$ChangeProfileImageErrorImplCopyWith<_$ChangeProfileImageErrorImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ChangeProfileImageErrorImplCopyWith<_$ChangeProfileImageErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

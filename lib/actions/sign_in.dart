@@ -7,10 +7,7 @@ part 'sign_in.freezed.dart';
 
 @freezed
 class SignIn with _$SignIn implements AppAction {
-  const factory SignIn(
-      {required String email,
-      required String password,
-      required ActionResult result}) = SignInStart;
+  const factory SignIn({required String email, required String password, required ActionResult result}) = SignInStart;
 
   const factory SignIn.successful(AppUser appUser) = SignInSuccessful;
 

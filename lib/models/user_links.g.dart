@@ -6,8 +6,7 @@ part of 'user_links.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserLinks$Impl _$$UserLinks$ImplFromJson(Map<String, dynamic> json) =>
-    _$UserLinks$Impl(
+_$UserLinks$Impl _$$UserLinks$ImplFromJson(Map<String, dynamic> json) => _$UserLinks$Impl(
       self: json['self'] as String,
       html: json['html'] as String,
       photos: json['photos'] as String,
@@ -15,8 +14,7 @@ _$UserLinks$Impl _$$UserLinks$ImplFromJson(Map<String, dynamic> json) =>
       portfolio: json['portfolio'] as String,
     );
 
-Map<String, dynamic> _$$UserLinks$ImplToJson(_$UserLinks$Impl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$UserLinks$ImplToJson(_$UserLinks$Impl instance) => <String, dynamic>{
       'self': instance.self,
       'html': instance.html,
       'photos': instance.photos,

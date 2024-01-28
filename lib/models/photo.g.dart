@@ -20,17 +20,15 @@ _$Photo$Impl _$$Photo$ImplFromJson(Map<String, dynamic> json) => _$Photo$Impl(
       likedByUser: json['liked_by_user'] as bool? ?? false,
       description: json['description'] as String? ?? '',
       user: User.fromJson(json['user'] as Map<String, dynamic>),
-      currentUserCollections:
-          (json['current_user_collections'] as List<dynamic>?)
-                  ?.map((e) => Collection.fromJson(e as Map<String, dynamic>))
-                  .toList() ??
-              const <Collection>[],
+      currentUserCollections: (json['current_user_collections'] as List<dynamic>?)
+              ?.map((e) => Collection.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          const <Collection>[],
       urls: Urls.fromJson(json['urls'] as Map<String, dynamic>),
       links: Links.fromJson(json['links'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$Photo$ImplToJson(_$Photo$Impl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$Photo$ImplToJson(_$Photo$Impl instance) => <String, dynamic>{
       'id': instance.id,
       'created_at': instance.createdAt,
       'updated_at': instance.updatedAt,

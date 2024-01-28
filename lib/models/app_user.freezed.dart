@@ -32,16 +32,13 @@ mixin _$AppUser {
 
 /// @nodoc
 abstract class $AppUserCopyWith<$Res> {
-  factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) =
-      _$AppUserCopyWithImpl<$Res, AppUser>;
+  factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) = _$AppUserCopyWithImpl<$Res, AppUser>;
   @useResult
-  $Res call(
-      {String uid, String email, String displayName, String? profileImageUrl});
+  $Res call({String uid, String email, String displayName, String? profileImageUrl});
 }
 
 /// @nodoc
-class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
-    implements $AppUserCopyWith<$Res> {
+class _$AppUserCopyWithImpl<$Res, $Val extends AppUser> implements $AppUserCopyWith<$Res> {
   _$AppUserCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -80,22 +77,17 @@ class _$AppUserCopyWithImpl<$Res, $Val extends AppUser>
 
 /// @nodoc
 abstract class _$$AppUser$ImplCopyWith<$Res> implements $AppUserCopyWith<$Res> {
-  factory _$$AppUser$ImplCopyWith(
-          _$AppUser$Impl value, $Res Function(_$AppUser$Impl) then) =
+  factory _$$AppUser$ImplCopyWith(_$AppUser$Impl value, $Res Function(_$AppUser$Impl) then) =
       __$$AppUser$ImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String uid, String email, String displayName, String? profileImageUrl});
+  $Res call({String uid, String email, String displayName, String? profileImageUrl});
 }
 
 /// @nodoc
-class __$$AppUser$ImplCopyWithImpl<$Res>
-    extends _$AppUserCopyWithImpl<$Res, _$AppUser$Impl>
+class __$$AppUser$ImplCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res, _$AppUser$Impl>
     implements _$$AppUser$ImplCopyWith<$Res> {
-  __$$AppUser$ImplCopyWithImpl(
-      _$AppUser$Impl _value, $Res Function(_$AppUser$Impl) _then)
-      : super(_value, _then);
+  __$$AppUser$ImplCopyWithImpl(_$AppUser$Impl _value, $Res Function(_$AppUser$Impl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -129,14 +121,9 @@ class __$$AppUser$ImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AppUser$Impl implements AppUser$ {
-  const _$AppUser$Impl(
-      {required this.uid,
-      required this.email,
-      required this.displayName,
-      this.profileImageUrl});
+  const _$AppUser$Impl({required this.uid, required this.email, required this.displayName, this.profileImageUrl});
 
-  factory _$AppUser$Impl.fromJson(Map<String, dynamic> json) =>
-      _$$AppUser$ImplFromJson(json);
+  factory _$AppUser$Impl.fromJson(Map<String, dynamic> json) => _$$AppUser$ImplFromJson(json);
 
   @override
   final String uid;
@@ -159,16 +146,13 @@ class _$AppUser$Impl implements AppUser$ {
             other is _$AppUser$Impl &&
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.email, email) || other.email == email) &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName) &&
-            (identical(other.profileImageUrl, profileImageUrl) ||
-                other.profileImageUrl == profileImageUrl));
+            (identical(other.displayName, displayName) || other.displayName == displayName) &&
+            (identical(other.profileImageUrl, profileImageUrl) || other.profileImageUrl == profileImageUrl));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, uid, email, displayName, profileImageUrl);
+  int get hashCode => Object.hash(runtimeType, uid, email, displayName, profileImageUrl);
 
   @JsonKey(ignore: true)
   @override
@@ -191,8 +175,7 @@ abstract class AppUser$ implements AppUser {
       required final String displayName,
       final String? profileImageUrl}) = _$AppUser$Impl;
 
-  factory AppUser$.fromJson(Map<String, dynamic> json) =
-      _$AppUser$Impl.fromJson;
+  factory AppUser$.fromJson(Map<String, dynamic> json) = _$AppUser$Impl.fromJson;
 
   @override
   String get uid;
@@ -204,6 +187,5 @@ abstract class AppUser$ implements AppUser {
   String? get profileImageUrl;
   @override
   @JsonKey(ignore: true)
-  _$$AppUser$ImplCopyWith<_$AppUser$Impl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AppUser$ImplCopyWith<_$AppUser$Impl> get copyWith => throw _privateConstructorUsedError;
 }

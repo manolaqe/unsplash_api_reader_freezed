@@ -64,8 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ..dispatch(const SetColor(''))
                   ..dispatch(const ListPhotoFiltered());
 
-                await context.store.onChange
-                    .firstWhere((AppState state) => !state.isLoading);
+                await context.store.onChange.firstWhere((AppState state) => !state.isLoading);
               },
               child: AppUserContainer(
                 builder: (BuildContext context, AppUser? appUser) {
@@ -79,8 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               },
                               child: const UserProfilePictureWidget(radius: 20))
                       ],
-                      backgroundColor:
-                          Theme.of(context).colorScheme.inversePrimary,
+                      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
                       title: Row(
                         children: <Widget>[
                           Expanded(
@@ -145,44 +143,33 @@ class _MyHomePageState extends State<MyHomePage> {
                                         onTap: () {
                                           if (appUser != null) {
                                             context
-                                              ..dispatch(
-                                                  SetSelectedPhoto(photo))
+                                              ..dispatch(SetSelectedPhoto(photo))
                                               ..dispatch(GetReviews(photo.id));
-                                            Navigator.pushNamed(
-                                                context, '/photo');
+                                            Navigator.pushNamed(context, '/photo');
                                           } else {
-                                            Navigator.pushNamed(
-                                                context, '/create_user');
+                                            Navigator.pushNamed(context, '/create_user');
                                           }
                                         },
                                         child: Column(
                                           children: <Widget>[
                                             Image.network(
                                               photo.urls.regular,
-                                              loadingBuilder:
-                                                  (BuildContext context,
-                                                      Widget widget,
-                                                      ImageChunkEvent?
-                                                          loadingProgress) {
+                                              loadingBuilder: (BuildContext context, Widget widget,
+                                                  ImageChunkEvent? loadingProgress) {
                                                 if (loadingProgress == null) {
                                                   return widget;
                                                 }
 
                                                 return Center(
                                                   child: CircularProgressIndicator(
-                                                      value: loadingProgress
-                                                              .cumulativeBytesLoaded /
-                                                          (loadingProgress
-                                                                  .expectedTotalBytes ??
-                                                              1)),
+                                                      value: loadingProgress.cumulativeBytesLoaded /
+                                                          (loadingProgress.expectedTotalBytes ?? 1)),
                                                 );
                                               },
                                             ),
                                             ListTile(
                                               leading: CircleAvatar(
-                                                backgroundImage: NetworkImage(
-                                                    photo.user.profileImage
-                                                        .small),
+                                                backgroundImage: NetworkImage(photo.user.profileImage.small),
                                               ),
                                               title: Text(photo.user.name),
                                               subtitle: Text(photo.description),

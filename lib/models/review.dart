@@ -12,6 +12,5 @@ class Review with _$Review {
     required DateTime createdAt,
   }) = Review$;
 
-  factory Review.fromJson(Map<dynamic, dynamic> json) =>
-      _$ReviewFromJson(Map<String, dynamic>.from(json));
+  factory Review.fromJson(Map<dynamic, dynamic> json) => _$ReviewFromJson(Map<String, dynamic>.from(json));
 }

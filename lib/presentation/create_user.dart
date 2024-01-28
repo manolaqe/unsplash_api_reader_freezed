@@ -29,8 +29,7 @@ class _CreateUserPageState extends State<CreateUserPage> {
             builder: (BuildContext context) {
               return AlertDialog(
                 title: const Text('Create user error'),
-                content: const Text(
-                    'The email address is already in use by another account.'),
+                content: const Text('The email address is already in use by another account.'),
                 actions: <Widget>[
                   TextButton(
                       onPressed: () {
@@ -112,9 +111,7 @@ class _CreateUserPageState extends State<CreateUserPage> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         context.dispatch(CreateUser(
-                            email: emailController.text,
-                            password: passwordController.text,
-                            result: _onResult));
+                            email: emailController.text, password: passwordController.text, result: _onResult));
                       }
                     },
                     child: const Text('Create User')),

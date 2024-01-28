@@ -12,6 +12,5 @@ class CreateReview with _$CreateReview implements AppAction {
   const factory CreateReview.successful(Review review) = CreateReviewSuccessful;
 
   @Implements<ErrorAction>()
-  const factory CreateReview.error(Object error, StackTrace stackTrace) =
-      CreateReviewError;
+  const factory CreateReview.error(Object error, StackTrace stackTrace) = CreateReviewError;
 }

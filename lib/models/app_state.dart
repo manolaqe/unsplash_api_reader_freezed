@@ -21,6 +21,5 @@ class AppState with _$AppState {
     @Default('') String color,
   }) = AppState$;
 
-  factory AppState.fromJson(Map<String, dynamic> json) =>
-      _$AppStateFromJson(Map<String, dynamic>.from(json));
+  factory AppState.fromJson(Map<String, dynamic> json) => _$AppStateFromJson(Map<String, dynamic>.from(json));
 }

@@ -62,10 +62,8 @@ class _CreateUserPageState extends State<SignInUserPage> {
                 ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        context.dispatch(SignIn(
-                            email: emailController.text,
-                            password: passwordController.text,
-                            result: _onResult));
+                        context.dispatch(
+                            SignIn(email: emailController.text, password: passwordController.text, result: _onResult));
                       }
                     },
                     child: const Text('Sign In')),
@@ -88,8 +86,7 @@ class _CreateUserPageState extends State<SignInUserPage> {
     } else if (action is SignInError) {
       final Object error = action.error;
 
-      if (error is FirebaseAuthException &&
-          error.code == 'INVALID_LOGIN_CREDENTIALS') {
+      if (error is FirebaseAuthException && error.code == 'INVALID_LOGIN_CREDENTIALS') {
         showDialog<void>(
             context: context,
             builder: (BuildContext context) {

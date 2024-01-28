@@ -12,6 +12,5 @@ class UserLinks with _$UserLinks {
       required String likes,
       required String portfolio}) = UserLinks$;
 
-  factory UserLinks.fromJson(Map<String, dynamic> json) =>
-      _$UserLinksFromJson(Map<String, dynamic>.from(json));
+  factory UserLinks.fromJson(Map<String, dynamic> json) => _$UserLinksFromJson(Map<String, dynamic>.from(json));
 }

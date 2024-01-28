@@ -9,10 +9,8 @@ part 'list_photos_filtered.freezed.dart';
 class ListPhotoFiltered with _$ListPhotoFiltered implements AppAction {
   const factory ListPhotoFiltered() = ListPhotoFilteredStart;
 
-  const factory ListPhotoFiltered.successful(List<Photo> photos) =
-      ListPhotoFilteredSuccessful;
+  const factory ListPhotoFiltered.successful(List<Photo> photos) = ListPhotoFilteredSuccessful;
 
   @Implements<ErrorAction>()
-  const factory ListPhotoFiltered.error(Object error, StackTrace stackTrace) =
-      ListPhotoFilteredError;
+  const factory ListPhotoFiltered.error(Object error, StackTrace stackTrace) = ListPhotoFilteredError;
 }

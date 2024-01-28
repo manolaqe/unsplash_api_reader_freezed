@@ -13,6 +13,5 @@ class Urls with _$Urls {
     required String thumb,
   }) = Urls$;
 
-  factory Urls.fromJson(Map<String, dynamic> json) =>
-      _$UrlsFromJson(Map<String, dynamic>.from(json));
+  factory Urls.fromJson(Map<String, dynamic> json) => _$UrlsFromJson(Map<String, dynamic>.from(json));
 }

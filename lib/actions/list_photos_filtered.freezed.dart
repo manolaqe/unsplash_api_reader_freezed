@@ -64,8 +64,7 @@ mixin _$ListPhotoFiltered {
 
 /// @nodoc
 abstract class $ListPhotoFilteredCopyWith<$Res> {
-  factory $ListPhotoFilteredCopyWith(
-          ListPhotoFiltered value, $Res Function(ListPhotoFiltered) then) =
+  factory $ListPhotoFilteredCopyWith(ListPhotoFiltered value, $Res Function(ListPhotoFiltered) then) =
       _$ListPhotoFilteredCopyWithImpl<$Res, ListPhotoFiltered>;
 }
 
@@ -83,8 +82,7 @@ class _$ListPhotoFilteredCopyWithImpl<$Res, $Val extends ListPhotoFiltered>
 /// @nodoc
 abstract class _$$ListPhotoFilteredStartImplCopyWith<$Res> {
   factory _$$ListPhotoFilteredStartImplCopyWith(
-          _$ListPhotoFilteredStartImpl value,
-          $Res Function(_$ListPhotoFilteredStartImpl) then) =
+          _$ListPhotoFilteredStartImpl value, $Res Function(_$ListPhotoFilteredStartImpl) then) =
       __$$ListPhotoFilteredStartImplCopyWithImpl<$Res>;
 }
 
@@ -93,8 +91,7 @@ class __$$ListPhotoFilteredStartImplCopyWithImpl<$Res>
     extends _$ListPhotoFilteredCopyWithImpl<$Res, _$ListPhotoFilteredStartImpl>
     implements _$$ListPhotoFilteredStartImplCopyWith<$Res> {
   __$$ListPhotoFilteredStartImplCopyWithImpl(
-      _$ListPhotoFilteredStartImpl _value,
-      $Res Function(_$ListPhotoFilteredStartImpl) _then)
+      _$ListPhotoFilteredStartImpl _value, $Res Function(_$ListPhotoFilteredStartImpl) _then)
       : super(_value, _then);
 }
 
@@ -110,9 +107,7 @@ class _$ListPhotoFilteredStartImpl implements ListPhotoFilteredStart {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ListPhotoFilteredStartImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ListPhotoFilteredStartImpl);
   }
 
   @override
@@ -194,8 +189,7 @@ abstract class ListPhotoFilteredStart implements ListPhotoFiltered {
 /// @nodoc
 abstract class _$$ListPhotoFilteredSuccessfulImplCopyWith<$Res> {
   factory _$$ListPhotoFilteredSuccessfulImplCopyWith(
-          _$ListPhotoFilteredSuccessfulImpl value,
-          $Res Function(_$ListPhotoFilteredSuccessfulImpl) then) =
+          _$ListPhotoFilteredSuccessfulImpl value, $Res Function(_$ListPhotoFilteredSuccessfulImpl) then) =
       __$$ListPhotoFilteredSuccessfulImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<Photo> photos});
@@ -203,12 +197,10 @@ abstract class _$$ListPhotoFilteredSuccessfulImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$ListPhotoFilteredSuccessfulImplCopyWithImpl<$Res>
-    extends _$ListPhotoFilteredCopyWithImpl<$Res,
-        _$ListPhotoFilteredSuccessfulImpl>
+    extends _$ListPhotoFilteredCopyWithImpl<$Res, _$ListPhotoFilteredSuccessfulImpl>
     implements _$$ListPhotoFilteredSuccessfulImplCopyWith<$Res> {
   __$$ListPhotoFilteredSuccessfulImplCopyWithImpl(
-      _$ListPhotoFilteredSuccessfulImpl _value,
-      $Res Function(_$ListPhotoFilteredSuccessfulImpl) _then)
+      _$ListPhotoFilteredSuccessfulImpl _value, $Res Function(_$ListPhotoFilteredSuccessfulImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -228,8 +220,7 @@ class __$$ListPhotoFilteredSuccessfulImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ListPhotoFilteredSuccessfulImpl implements ListPhotoFilteredSuccessful {
-  const _$ListPhotoFilteredSuccessfulImpl(final List<Photo> photos)
-      : _photos = photos;
+  const _$ListPhotoFilteredSuccessfulImpl(final List<Photo> photos) : _photos = photos;
 
   final List<Photo> _photos;
   @override
@@ -253,15 +244,13 @@ class _$ListPhotoFilteredSuccessfulImpl implements ListPhotoFilteredSuccessful {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_photos));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_photos));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListPhotoFilteredSuccessfulImplCopyWith<_$ListPhotoFilteredSuccessfulImpl>
-      get copyWith => __$$ListPhotoFilteredSuccessfulImplCopyWithImpl<
-          _$ListPhotoFilteredSuccessfulImpl>(this, _$identity);
+  _$$ListPhotoFilteredSuccessfulImplCopyWith<_$ListPhotoFilteredSuccessfulImpl> get copyWith =>
+      __$$ListPhotoFilteredSuccessfulImplCopyWithImpl<_$ListPhotoFilteredSuccessfulImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -333,20 +322,18 @@ class _$ListPhotoFilteredSuccessfulImpl implements ListPhotoFilteredSuccessful {
 }
 
 abstract class ListPhotoFilteredSuccessful implements ListPhotoFiltered {
-  const factory ListPhotoFilteredSuccessful(final List<Photo> photos) =
-      _$ListPhotoFilteredSuccessfulImpl;
+  const factory ListPhotoFilteredSuccessful(final List<Photo> photos) = _$ListPhotoFilteredSuccessfulImpl;
 
   List<Photo> get photos;
   @JsonKey(ignore: true)
-  _$$ListPhotoFilteredSuccessfulImplCopyWith<_$ListPhotoFilteredSuccessfulImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ListPhotoFilteredSuccessfulImplCopyWith<_$ListPhotoFilteredSuccessfulImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$ListPhotoFilteredErrorImplCopyWith<$Res> {
   factory _$$ListPhotoFilteredErrorImplCopyWith(
-          _$ListPhotoFilteredErrorImpl value,
-          $Res Function(_$ListPhotoFilteredErrorImpl) then) =
+          _$ListPhotoFilteredErrorImpl value, $Res Function(_$ListPhotoFilteredErrorImpl) then) =
       __$$ListPhotoFilteredErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Object error, StackTrace stackTrace});
@@ -357,8 +344,7 @@ class __$$ListPhotoFilteredErrorImplCopyWithImpl<$Res>
     extends _$ListPhotoFilteredCopyWithImpl<$Res, _$ListPhotoFilteredErrorImpl>
     implements _$$ListPhotoFilteredErrorImplCopyWith<$Res> {
   __$$ListPhotoFilteredErrorImplCopyWithImpl(
-      _$ListPhotoFilteredErrorImpl _value,
-      $Res Function(_$ListPhotoFilteredErrorImpl) _then)
+      _$ListPhotoFilteredErrorImpl _value, $Res Function(_$ListPhotoFilteredErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -398,20 +384,17 @@ class _$ListPhotoFilteredErrorImpl implements ListPhotoFilteredError {
         (other.runtimeType == runtimeType &&
             other is _$ListPhotoFilteredErrorImpl &&
             const DeepCollectionEquality().equals(other.error, error) &&
-            (identical(other.stackTrace, stackTrace) ||
-                other.stackTrace == stackTrace));
+            (identical(other.stackTrace, stackTrace) || other.stackTrace == stackTrace));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(error), stackTrace);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ListPhotoFilteredErrorImplCopyWith<_$ListPhotoFilteredErrorImpl>
-      get copyWith => __$$ListPhotoFilteredErrorImplCopyWithImpl<
-          _$ListPhotoFilteredErrorImpl>(this, _$identity);
+  _$$ListPhotoFilteredErrorImplCopyWith<_$ListPhotoFilteredErrorImpl> get copyWith =>
+      __$$ListPhotoFilteredErrorImplCopyWithImpl<_$ListPhotoFilteredErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -482,15 +465,12 @@ class _$ListPhotoFilteredErrorImpl implements ListPhotoFilteredError {
   }
 }
 
-abstract class ListPhotoFilteredError
-    implements ListPhotoFiltered, ErrorAction {
-  const factory ListPhotoFilteredError(
-          final Object error, final StackTrace stackTrace) =
-      _$ListPhotoFilteredErrorImpl;
+abstract class ListPhotoFilteredError implements ListPhotoFiltered, ErrorAction {
+  const factory ListPhotoFilteredError(final Object error, final StackTrace stackTrace) = _$ListPhotoFilteredErrorImpl;
 
   Object get error;
   StackTrace get stackTrace;
   @JsonKey(ignore: true)
-  _$$ListPhotoFilteredErrorImplCopyWith<_$ListPhotoFilteredErrorImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ListPhotoFilteredErrorImplCopyWith<_$ListPhotoFilteredErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

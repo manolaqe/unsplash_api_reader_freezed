@@ -14,8 +14,7 @@ class UnsplashApi {
   final String _cliendId;
   final FirebaseFirestore _firestore;
 
-  Future<List<Photo>> listPhotosFiltered(int page,
-      {String query = '', String color = ''}) async {
+  Future<List<Photo>> listPhotosFiltered(int page, {String query = '', String color = ''}) async {
     final Uri uri = Uri.parse('$_baseUrl/search/photos');
 
     if (query.isEmpty || color.isEmpty) {
@@ -34,29 +33,23 @@ class UnsplashApi {
           HttpHeaders.authorizationHeader: 'Client-ID $_cliendId',
         });
 
-    final Map<String, dynamic> json =
-        jsonDecode(response.body) as Map<String, dynamic>;
+    final Map<String, dynamic> json = jsonDecode(response.body) as Map<String, dynamic>;
     final List<dynamic> results = json['results'] as List<dynamic>;
 
-    return results
-        .map((dynamic item) => Photo.fromJson(item as Map<String, dynamic>))
-        .toList();
+    return results.map((dynamic item) => Photo.fromJson(item as Map<String, dynamic>)).toList();
   }
 
   Future<List<Photo>> listPhotos(int page) async {
     final Uri uri = Uri.parse('$_baseUrl/photos');
 
-    final Response response = await _client.get(
-        uri.replace(queryParameters: <String, String>{'page': '$page'}),
-        headers: <String, String>{
-          HttpHeaders.authorizationHeader: 'Client-ID $_cliendId',
-        });
+    final Response response =
+        await _client.get(uri.replace(queryParameters: <String, String>{'page': '$page'}), headers: <String, String>{
+      HttpHeaders.authorizationHeader: 'Client-ID $_cliendId',
+    });
 
     final List<dynamic> json = jsonDecode(response.body) as List<dynamic>;
 
-    return json
-        .map((dynamic item) => Photo.fromJson(item as Map<String, dynamic>))
-        .toList();
+    return json.map((dynamic item) => Photo.fromJson(item as Map<String, dynamic>)).toList();
   }
 
   Future<List<Review>> getReviews(String photoId) async {
@@ -65,10 +58,7 @@ class UnsplashApi {
         .orderBy('createdAt', descending: true)
         .get();
 
-    return snapshot.docs
-        .map((QueryDocumentSnapshot<Map<String, dynamic>> doc) =>
-            Review.fromJson(doc.data()))
-        .toList();
+    return snapshot.docs.map((QueryDocumentSnapshot<Map<String, dynamic>> doc) => Review.fromJson(doc.data())).toList();
   }
 
   Future<Review> createReview({
@@ -76,8 +66,7 @@ class UnsplashApi {
     required String text,
     required String uid,
   }) async {
-    final DocumentReference<Map<String, dynamic>> ref =
-        _firestore.collection('photos/$photoId/reviews').doc();
+    final DocumentReference<Map<String, dynamic>> ref = _firestore.collection('photos/$photoId/reviews').doc();
 
     final Review review = Review(
       id: ref.id,

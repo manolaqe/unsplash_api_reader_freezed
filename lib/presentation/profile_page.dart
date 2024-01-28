@@ -30,8 +30,7 @@ class ProfilePage extends StatelessWidget {
               GestureDetector(
                   onTap: () async {
                     final ImagePicker imagePicker = ImagePicker();
-                    final XFile? file = await imagePicker.pickImage(
-                        source: ImageSource.gallery, maxHeight: 1024);
+                    final XFile? file = await imagePicker.pickImage(source: ImageSource.gallery, maxHeight: 1024);
 
                     if (file != null) {
                       // ignore: use_build_context_synchronously
@@ -63,8 +62,7 @@ class ProfilePage extends StatelessWidget {
                     builder: (BuildContext context) {
                       return AlertDialog(
                         title: const Text('Sign Out'),
-                        content:
-                            const Text('Are you sure you want to sign out?'),
+                        content: const Text('Are you sure you want to sign out?'),
                         actions: <Widget>[
                           TextButton(
                             onPressed: () {
