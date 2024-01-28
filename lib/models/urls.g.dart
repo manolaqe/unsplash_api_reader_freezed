@@ -14,7 +14,8 @@ _$Urls$Impl _$$Urls$ImplFromJson(Map<String, dynamic> json) => _$Urls$Impl(
       thumb: json['thumb'] as String,
     );
 
-Map<String, dynamic> _$$Urls$ImplToJson(_$Urls$Impl instance) => <String, dynamic>{
+Map<String, dynamic> _$$Urls$ImplToJson(_$Urls$Impl instance) =>
+    <String, dynamic>{
       'raw': instance.raw,
       'full': instance.full,
       'regular': instance.regular,

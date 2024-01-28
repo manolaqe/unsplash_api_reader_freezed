@@ -18,11 +18,13 @@ _$User$Impl _$$User$ImplFromJson(Map<String, dynamic> json) => _$User$Impl(
       totalCollections: json['total_collections'] as int? ?? 0,
       instagramUsername: json['instagram_username'] as String? ?? '',
       twitterUsername: json['twitter_username'] as String? ?? '',
-      profileImage: ProfileImage.fromJson(json['profile_image'] as Map<String, dynamic>),
+      profileImage:
+          ProfileImage.fromJson(json['profile_image'] as Map<String, dynamic>),
       links: UserLinks.fromJson(json['links'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$User$ImplToJson(_$User$Impl instance) => <String, dynamic>{
+Map<String, dynamic> _$$User$ImplToJson(_$User$Impl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'username': instance.username,
       'name': instance.name,

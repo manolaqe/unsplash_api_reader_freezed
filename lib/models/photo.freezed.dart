@@ -36,7 +36,8 @@ mixin _$Photo {
   String get description => throw _privateConstructorUsedError;
   User get user => throw _privateConstructorUsedError;
   @JsonKey(name: 'current_user_collections')
-  List<Collection> get currentUserCollections => throw _privateConstructorUsedError;
+  List<Collection> get currentUserCollections =>
+      throw _privateConstructorUsedError;
   Urls get urls => throw _privateConstructorUsedError;
   Links get links => throw _privateConstructorUsedError;
 
@@ -47,7 +48,8 @@ mixin _$Photo {
 
 /// @nodoc
 abstract class $PhotoCopyWith<$Res> {
-  factory $PhotoCopyWith(Photo value, $Res Function(Photo) then) = _$PhotoCopyWithImpl<$Res, Photo>;
+  factory $PhotoCopyWith(Photo value, $Res Function(Photo) then) =
+      _$PhotoCopyWithImpl<$Res, Photo>;
   @useResult
   $Res call(
       {String id,
@@ -61,7 +63,8 @@ abstract class $PhotoCopyWith<$Res> {
       @JsonKey(name: 'liked_by_user') bool likedByUser,
       String description,
       User user,
-      @JsonKey(name: 'current_user_collections') List<Collection> currentUserCollections,
+      @JsonKey(name: 'current_user_collections')
+      List<Collection> currentUserCollections,
       Urls urls,
       Links links});
 
@@ -71,7 +74,8 @@ abstract class $PhotoCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PhotoCopyWithImpl<$Res, $Val extends Photo> implements $PhotoCopyWith<$Res> {
+class _$PhotoCopyWithImpl<$Res, $Val extends Photo>
+    implements $PhotoCopyWith<$Res> {
   _$PhotoCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -184,7 +188,8 @@ class _$PhotoCopyWithImpl<$Res, $Val extends Photo> implements $PhotoCopyWith<$R
 
 /// @nodoc
 abstract class _$$Photo$ImplCopyWith<$Res> implements $PhotoCopyWith<$Res> {
-  factory _$$Photo$ImplCopyWith(_$Photo$Impl value, $Res Function(_$Photo$Impl) then) =
+  factory _$$Photo$ImplCopyWith(
+          _$Photo$Impl value, $Res Function(_$Photo$Impl) then) =
       __$$Photo$ImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -200,7 +205,8 @@ abstract class _$$Photo$ImplCopyWith<$Res> implements $PhotoCopyWith<$Res> {
       @JsonKey(name: 'liked_by_user') bool likedByUser,
       String description,
       User user,
-      @JsonKey(name: 'current_user_collections') List<Collection> currentUserCollections,
+      @JsonKey(name: 'current_user_collections')
+      List<Collection> currentUserCollections,
       Urls urls,
       Links links});
 
@@ -213,9 +219,12 @@ abstract class _$$Photo$ImplCopyWith<$Res> implements $PhotoCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$Photo$ImplCopyWithImpl<$Res> extends _$PhotoCopyWithImpl<$Res, _$Photo$Impl>
+class __$$Photo$ImplCopyWithImpl<$Res>
+    extends _$PhotoCopyWithImpl<$Res, _$Photo$Impl>
     implements _$$Photo$ImplCopyWith<$Res> {
-  __$$Photo$ImplCopyWithImpl(_$Photo$Impl _value, $Res Function(_$Photo$Impl) _then) : super(_value, _then);
+  __$$Photo$ImplCopyWithImpl(
+      _$Photo$Impl _value, $Res Function(_$Photo$Impl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -311,12 +320,14 @@ class _$Photo$Impl implements Photo$ {
       @JsonKey(name: 'liked_by_user') this.likedByUser = false,
       this.description = '',
       required this.user,
-      @JsonKey(name: 'current_user_collections') final List<Collection> currentUserCollections = const <Collection>[],
+      @JsonKey(name: 'current_user_collections')
+      final List<Collection> currentUserCollections = const <Collection>[],
       required this.urls,
       required this.links})
       : _currentUserCollections = currentUserCollections;
 
-  factory _$Photo$Impl.fromJson(Map<String, dynamic> json) => _$$Photo$ImplFromJson(json);
+  factory _$Photo$Impl.fromJson(Map<String, dynamic> json) =>
+      _$$Photo$ImplFromJson(json);
 
   @override
   @JsonKey()
@@ -354,7 +365,8 @@ class _$Photo$Impl implements Photo$ {
   @override
   @JsonKey(name: 'current_user_collections')
   List<Collection> get currentUserCollections {
-    if (_currentUserCollections is EqualUnmodifiableListView) return _currentUserCollections;
+    if (_currentUserCollections is EqualUnmodifiableListView)
+      return _currentUserCollections;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_currentUserCollections);
   }
@@ -375,30 +387,51 @@ class _$Photo$Impl implements Photo$ {
         (other.runtimeType == runtimeType &&
             other is _$Photo$Impl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
-            (identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.updatedAt, updatedAt) ||
+                other.updatedAt == updatedAt) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.color, color) || other.color == color) &&
-            (identical(other.blurHash, blurHash) || other.blurHash == blurHash) &&
+            (identical(other.blurHash, blurHash) ||
+                other.blurHash == blurHash) &&
             (identical(other.likes, likes) || other.likes == likes) &&
-            (identical(other.likedByUser, likedByUser) || other.likedByUser == likedByUser) &&
-            (identical(other.description, description) || other.description == description) &&
+            (identical(other.likedByUser, likedByUser) ||
+                other.likedByUser == likedByUser) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.user, user) || other.user == user) &&
-            const DeepCollectionEquality().equals(other._currentUserCollections, _currentUserCollections) &&
+            const DeepCollectionEquality().equals(
+                other._currentUserCollections, _currentUserCollections) &&
             (identical(other.urls, urls) || other.urls == urls) &&
             (identical(other.links, links) || other.links == links));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, createdAt, updatedAt, width, height, color, blurHash, likes,
-      likedByUser, description, user, const DeepCollectionEquality().hash(_currentUserCollections), urls, links);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      createdAt,
+      updatedAt,
+      width,
+      height,
+      color,
+      blurHash,
+      likes,
+      likedByUser,
+      description,
+      user,
+      const DeepCollectionEquality().hash(_currentUserCollections),
+      urls,
+      links);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$Photo$ImplCopyWith<_$Photo$Impl> get copyWith => __$$Photo$ImplCopyWithImpl<_$Photo$Impl>(this, _$identity);
+  _$$Photo$ImplCopyWith<_$Photo$Impl> get copyWith =>
+      __$$Photo$ImplCopyWithImpl<_$Photo$Impl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -421,7 +454,8 @@ abstract class Photo$ implements Photo {
       @JsonKey(name: 'liked_by_user') final bool likedByUser,
       final String description,
       required final User user,
-      @JsonKey(name: 'current_user_collections') final List<Collection> currentUserCollections,
+      @JsonKey(name: 'current_user_collections')
+      final List<Collection> currentUserCollections,
       required final Urls urls,
       required final Links links}) = _$Photo$Impl;
 
@@ -462,5 +496,6 @@ abstract class Photo$ implements Photo {
   Links get links;
   @override
   @JsonKey(ignore: true)
-  _$$Photo$ImplCopyWith<_$Photo$Impl> get copyWith => throw _privateConstructorUsedError;
+  _$$Photo$ImplCopyWith<_$Photo$Impl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

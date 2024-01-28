@@ -6,7 +6,8 @@ part of 'collection.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$Collection$Impl _$$Collection$ImplFromJson(Map<String, dynamic> json) => _$Collection$Impl(
+_$Collection$Impl _$$Collection$ImplFromJson(Map<String, dynamic> json) =>
+    _$Collection$Impl(
       id: json['id'] as int,
       title: json['title'] as String,
       publishedAt: json['publishedAt'] as String,
@@ -16,7 +17,8 @@ _$Collection$Impl _$$Collection$ImplFromJson(Map<String, dynamic> json) => _$Col
       user: json['user'],
     );
 
-Map<String, dynamic> _$$Collection$ImplToJson(_$Collection$Impl instance) => <String, dynamic>{
+Map<String, dynamic> _$$Collection$ImplToJson(_$Collection$Impl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'title': instance.title,
       'publishedAt': instance.publishedAt,

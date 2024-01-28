@@ -26,19 +26,22 @@ mixin _$ProfileImage {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProfileImageCopyWith<ProfileImage> get copyWith => throw _privateConstructorUsedError;
+  $ProfileImageCopyWith<ProfileImage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ProfileImageCopyWith<$Res> {
-  factory $ProfileImageCopyWith(ProfileImage value, $Res Function(ProfileImage) then) =
+  factory $ProfileImageCopyWith(
+          ProfileImage value, $Res Function(ProfileImage) then) =
       _$ProfileImageCopyWithImpl<$Res, ProfileImage>;
   @useResult
   $Res call({String small, String medium, String large});
 }
 
 /// @nodoc
-class _$ProfileImageCopyWithImpl<$Res, $Val extends ProfileImage> implements $ProfileImageCopyWith<$Res> {
+class _$ProfileImageCopyWithImpl<$Res, $Val extends ProfileImage>
+    implements $ProfileImageCopyWith<$Res> {
   _$ProfileImageCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -71,8 +74,10 @@ class _$ProfileImageCopyWithImpl<$Res, $Val extends ProfileImage> implements $Pr
 }
 
 /// @nodoc
-abstract class _$$ProfileImage$ImplCopyWith<$Res> implements $ProfileImageCopyWith<$Res> {
-  factory _$$ProfileImage$ImplCopyWith(_$ProfileImage$Impl value, $Res Function(_$ProfileImage$Impl) then) =
+abstract class _$$ProfileImage$ImplCopyWith<$Res>
+    implements $ProfileImageCopyWith<$Res> {
+  factory _$$ProfileImage$ImplCopyWith(
+          _$ProfileImage$Impl value, $Res Function(_$ProfileImage$Impl) then) =
       __$$ProfileImage$ImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -80,9 +85,11 @@ abstract class _$$ProfileImage$ImplCopyWith<$Res> implements $ProfileImageCopyWi
 }
 
 /// @nodoc
-class __$$ProfileImage$ImplCopyWithImpl<$Res> extends _$ProfileImageCopyWithImpl<$Res, _$ProfileImage$Impl>
+class __$$ProfileImage$ImplCopyWithImpl<$Res>
+    extends _$ProfileImageCopyWithImpl<$Res, _$ProfileImage$Impl>
     implements _$$ProfileImage$ImplCopyWith<$Res> {
-  __$$ProfileImage$ImplCopyWithImpl(_$ProfileImage$Impl _value, $Res Function(_$ProfileImage$Impl) _then)
+  __$$ProfileImage$ImplCopyWithImpl(
+      _$ProfileImage$Impl _value, $Res Function(_$ProfileImage$Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -112,9 +119,11 @@ class __$$ProfileImage$ImplCopyWithImpl<$Res> extends _$ProfileImageCopyWithImpl
 /// @nodoc
 @JsonSerializable()
 class _$ProfileImage$Impl implements ProfileImage$ {
-  const _$ProfileImage$Impl({required this.small, required this.medium, required this.large});
+  const _$ProfileImage$Impl(
+      {required this.small, required this.medium, required this.large});
 
-  factory _$ProfileImage$Impl.fromJson(Map<String, dynamic> json) => _$$ProfileImage$ImplFromJson(json);
+  factory _$ProfileImage$Impl.fromJson(Map<String, dynamic> json) =>
+      _$$ProfileImage$ImplFromJson(json);
 
   @override
   final String small;
@@ -158,9 +167,12 @@ class _$ProfileImage$Impl implements ProfileImage$ {
 
 abstract class ProfileImage$ implements ProfileImage {
   const factory ProfileImage$(
-      {required final String small, required final String medium, required final String large}) = _$ProfileImage$Impl;
+      {required final String small,
+      required final String medium,
+      required final String large}) = _$ProfileImage$Impl;
 
-  factory ProfileImage$.fromJson(Map<String, dynamic> json) = _$ProfileImage$Impl.fromJson;
+  factory ProfileImage$.fromJson(Map<String, dynamic> json) =
+      _$ProfileImage$Impl.fromJson;
 
   @override
   String get small;
@@ -170,5 +182,6 @@ abstract class ProfileImage$ implements ProfileImage {
   String get large;
   @override
   @JsonKey(ignore: true)
-  _$$ProfileImage$ImplCopyWith<_$ProfileImage$Impl> get copyWith => throw _privateConstructorUsedError;
+  _$$ProfileImage$ImplCopyWith<_$ProfileImage$Impl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

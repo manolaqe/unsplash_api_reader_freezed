@@ -30,12 +30,14 @@ mixin _$Collection {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CollectionCopyWith<Collection> get copyWith => throw _privateConstructorUsedError;
+  $CollectionCopyWith<Collection> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CollectionCopyWith<$Res> {
-  factory $CollectionCopyWith(Collection value, $Res Function(Collection) then) =
+  factory $CollectionCopyWith(
+          Collection value, $Res Function(Collection) then) =
       _$CollectionCopyWithImpl<$Res, Collection>;
   @useResult
   $Res call(
@@ -49,7 +51,8 @@ abstract class $CollectionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CollectionCopyWithImpl<$Res, $Val extends Collection> implements $CollectionCopyWith<$Res> {
+class _$CollectionCopyWithImpl<$Res, $Val extends Collection>
+    implements $CollectionCopyWith<$Res> {
   _$CollectionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -102,8 +105,10 @@ class _$CollectionCopyWithImpl<$Res, $Val extends Collection> implements $Collec
 }
 
 /// @nodoc
-abstract class _$$Collection$ImplCopyWith<$Res> implements $CollectionCopyWith<$Res> {
-  factory _$$Collection$ImplCopyWith(_$Collection$Impl value, $Res Function(_$Collection$Impl) then) =
+abstract class _$$Collection$ImplCopyWith<$Res>
+    implements $CollectionCopyWith<$Res> {
+  factory _$$Collection$ImplCopyWith(
+          _$Collection$Impl value, $Res Function(_$Collection$Impl) then) =
       __$$Collection$ImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -118,9 +123,11 @@ abstract class _$$Collection$ImplCopyWith<$Res> implements $CollectionCopyWith<$
 }
 
 /// @nodoc
-class __$$Collection$ImplCopyWithImpl<$Res> extends _$CollectionCopyWithImpl<$Res, _$Collection$Impl>
+class __$$Collection$ImplCopyWithImpl<$Res>
+    extends _$CollectionCopyWithImpl<$Res, _$Collection$Impl>
     implements _$$Collection$ImplCopyWith<$Res> {
-  __$$Collection$ImplCopyWithImpl(_$Collection$Impl _value, $Res Function(_$Collection$Impl) _then)
+  __$$Collection$ImplCopyWithImpl(
+      _$Collection$Impl _value, $Res Function(_$Collection$Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -179,7 +186,8 @@ class _$Collection$Impl implements Collection$ {
       required this.coverPhoto,
       required this.user});
 
-  factory _$Collection$Impl.fromJson(Map<String, dynamic> json) => _$$Collection$ImplFromJson(json);
+  factory _$Collection$Impl.fromJson(Map<String, dynamic> json) =>
+      _$$Collection$ImplFromJson(json);
 
   @override
   final int id;
@@ -208,17 +216,28 @@ class _$Collection$Impl implements Collection$ {
             other is _$Collection$Impl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.publishedAt, publishedAt) || other.publishedAt == publishedAt) &&
-            (identical(other.lastCollectedAt, lastCollectedAt) || other.lastCollectedAt == lastCollectedAt) &&
-            (identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt) &&
-            const DeepCollectionEquality().equals(other.coverPhoto, coverPhoto) &&
+            (identical(other.publishedAt, publishedAt) ||
+                other.publishedAt == publishedAt) &&
+            (identical(other.lastCollectedAt, lastCollectedAt) ||
+                other.lastCollectedAt == lastCollectedAt) &&
+            (identical(other.updatedAt, updatedAt) ||
+                other.updatedAt == updatedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.coverPhoto, coverPhoto) &&
             const DeepCollectionEquality().equals(other.user, user));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, publishedAt, lastCollectedAt, updatedAt,
-      const DeepCollectionEquality().hash(coverPhoto), const DeepCollectionEquality().hash(user));
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      title,
+      publishedAt,
+      lastCollectedAt,
+      updatedAt,
+      const DeepCollectionEquality().hash(coverPhoto),
+      const DeepCollectionEquality().hash(user));
 
   @JsonKey(ignore: true)
   @override
@@ -244,7 +263,8 @@ abstract class Collection$ implements Collection {
       required final dynamic coverPhoto,
       required final dynamic user}) = _$Collection$Impl;
 
-  factory Collection$.fromJson(Map<String, dynamic> json) = _$Collection$Impl.fromJson;
+  factory Collection$.fromJson(Map<String, dynamic> json) =
+      _$Collection$Impl.fromJson;
 
   @override
   int get id;
@@ -262,5 +282,6 @@ abstract class Collection$ implements Collection {
   dynamic get user;
   @override
   @JsonKey(ignore: true)
-  _$$Collection$ImplCopyWith<_$Collection$Impl> get copyWith => throw _privateConstructorUsedError;
+  _$$Collection$ImplCopyWith<_$Collection$Impl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

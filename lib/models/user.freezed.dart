@@ -48,7 +48,8 @@ mixin _$User {
 
 /// @nodoc
 abstract class $UserCopyWith<$Res> {
-  factory $UserCopyWith(User value, $Res Function(User) then) = _$UserCopyWithImpl<$Res, User>;
+  factory $UserCopyWith(User value, $Res Function(User) then) =
+      _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call(
       {String id,
@@ -70,7 +71,8 @@ abstract class $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res> {
+class _$UserCopyWithImpl<$Res, $Val extends User>
+    implements $UserCopyWith<$Res> {
   _$UserCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -170,7 +172,9 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
 
 /// @nodoc
 abstract class _$$User$ImplCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$$User$ImplCopyWith(_$User$Impl value, $Res Function(_$User$Impl) then) = __$$User$ImplCopyWithImpl<$Res>;
+  factory _$$User$ImplCopyWith(
+          _$User$Impl value, $Res Function(_$User$Impl) then) =
+      __$$User$ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -195,9 +199,12 @@ abstract class _$$User$ImplCopyWith<$Res> implements $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$User$ImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$User$Impl>
+class __$$User$ImplCopyWithImpl<$Res>
+    extends _$UserCopyWithImpl<$Res, _$User$Impl>
     implements _$$User$ImplCopyWith<$Res> {
-  __$$User$ImplCopyWithImpl(_$User$Impl _value, $Res Function(_$User$Impl) _then) : super(_value, _then);
+  __$$User$ImplCopyWithImpl(
+      _$User$Impl _value, $Res Function(_$User$Impl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -291,7 +298,8 @@ class _$User$Impl implements User$ {
       @JsonKey(name: 'profile_image') required this.profileImage,
       required this.links});
 
-  factory _$User$Impl.fromJson(Map<String, dynamic> json) => _$$User$ImplFromJson(json);
+  factory _$User$Impl.fromJson(Map<String, dynamic> json) =>
+      _$$User$ImplFromJson(json);
 
   @override
   @JsonKey()
@@ -343,29 +351,52 @@ class _$User$Impl implements User$ {
         (other.runtimeType == runtimeType &&
             other is _$User$Impl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.username, username) || other.username == username) &&
+            (identical(other.username, username) ||
+                other.username == username) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.portfolioUrl, portfolioUrl) || other.portfolioUrl == portfolioUrl) &&
+            (identical(other.portfolioUrl, portfolioUrl) ||
+                other.portfolioUrl == portfolioUrl) &&
             (identical(other.bio, bio) || other.bio == bio) &&
-            (identical(other.location, location) || other.location == location) &&
-            (identical(other.totalLikes, totalLikes) || other.totalLikes == totalLikes) &&
-            (identical(other.totalPhotos, totalPhotos) || other.totalPhotos == totalPhotos) &&
-            (identical(other.totalCollections, totalCollections) || other.totalCollections == totalCollections) &&
-            (identical(other.instagramUsername, instagramUsername) || other.instagramUsername == instagramUsername) &&
-            (identical(other.twitterUsername, twitterUsername) || other.twitterUsername == twitterUsername) &&
-            (identical(other.profileImage, profileImage) || other.profileImage == profileImage) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
+            (identical(other.totalLikes, totalLikes) ||
+                other.totalLikes == totalLikes) &&
+            (identical(other.totalPhotos, totalPhotos) ||
+                other.totalPhotos == totalPhotos) &&
+            (identical(other.totalCollections, totalCollections) ||
+                other.totalCollections == totalCollections) &&
+            (identical(other.instagramUsername, instagramUsername) ||
+                other.instagramUsername == instagramUsername) &&
+            (identical(other.twitterUsername, twitterUsername) ||
+                other.twitterUsername == twitterUsername) &&
+            (identical(other.profileImage, profileImage) ||
+                other.profileImage == profileImage) &&
             (identical(other.links, links) || other.links == links));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, username, name, portfolioUrl, bio, location, totalLikes, totalPhotos,
-      totalCollections, instagramUsername, twitterUsername, profileImage, links);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      username,
+      name,
+      portfolioUrl,
+      bio,
+      location,
+      totalLikes,
+      totalPhotos,
+      totalCollections,
+      instagramUsername,
+      twitterUsername,
+      profileImage,
+      links);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$User$ImplCopyWith<_$User$Impl> get copyWith => __$$User$ImplCopyWithImpl<_$User$Impl>(this, _$identity);
+  _$$User$ImplCopyWith<_$User$Impl> get copyWith =>
+      __$$User$ImplCopyWithImpl<_$User$Impl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -428,5 +459,6 @@ abstract class User$ implements User {
   UserLinks get links;
   @override
   @JsonKey(ignore: true)
-  _$$User$ImplCopyWith<_$User$Impl> get copyWith => throw _privateConstructorUsedError;
+  _$$User$ImplCopyWith<_$User$Impl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
